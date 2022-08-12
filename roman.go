@@ -53,6 +53,7 @@ func romanToInt(romanNumeral string) int {
 	if romanNumeral == "" {
 		return 0
 	}
+	
 	total, lastnum, num := 0, 0, 0
 	for i := 0; i < len(romanNumeral); i++ {
 		char := romanNumeral[len(romanNumeral)-(i+1) : len(romanNumeral)-i]
@@ -67,18 +68,16 @@ func romanToInt(romanNumeral string) int {
 		lastnum = num
 
 	}
-
+	
 	return total
 }
 
 //Roman vinculum system realization
 func convertRomanBlocks(romanNumeral string) int {
-
 	blocks := strings.Split(romanNumeral, "|")
 
 	//coefficient for multiplying
 	q := len(blocks) - 1
-
 	total := 0
 
 	for _, block := range blocks {
@@ -91,7 +90,6 @@ func convertRomanBlocks(romanNumeral string) int {
 }
 
 func CompareTwoRomans(roman1, roman2 string) int {
-
 	if convertRomanBlocks(roman1) == convertRomanBlocks(roman2) {
 		return 1
 	}
