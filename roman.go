@@ -72,7 +72,7 @@ func romanToInt(romanNumeral string) int {
 	return total
 }
 
-//Roman vinculum system realization
+//Roman vinculum system realization.
 func convertRomanBlocks(romanNumeral string) int {
 	blocks := strings.Split(romanNumeral, "|")
 
